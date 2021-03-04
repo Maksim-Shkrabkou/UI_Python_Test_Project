@@ -13,7 +13,7 @@ class LoginPage(Page):
         self.browser.open("/login")
         return self
 
-    @allure.step("Login as {0} {1}")
+    @allure.step("Login as {1} {2}")
     def login_as(self, username, password):
         self.browser.element("//input[@id='usernameOrEmail']").set_value(username)
         self.browser.element("//input[@id='password']").set_value(password)
